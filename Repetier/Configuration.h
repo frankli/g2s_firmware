@@ -476,7 +476,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define UI_BED_COATING 1
 #define FEATURE_Z_PROBE 1
 #define Z_PROBE_BED_DISTANCE 10
-#define Z_PROBE_PIN -1
+#define Z_PROBE_PIN ORIG_Z_MIN_PIN
 #define Z_PROBE_PULLUP 0
 #define Z_PROBE_ON_HIGH 0
 #define Z_PROBE_X_OFFSET -19
@@ -960,7 +960,7 @@ Values must be in range 1..255
     "fanThermoThermistorPin": -1,
     "fanThermoThermistorType": 1,
     "scalePidToMax": 0,
-    "zProbePin": -1,
+    "zProbePin": "ORIG_Z_MIN_PIN",
     "zProbeBedDistance": 10,
     "zProbePullup": "0",
     "zProbeOnHigh": "0",
