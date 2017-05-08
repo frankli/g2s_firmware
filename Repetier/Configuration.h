@@ -525,7 +525,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #ifndef SDSUPPORT  // Some boards have sd support on board. These define the values already in pins.h
 #define SDSUPPORT 1
 #undef SDCARDDETECT
-#define SDCARDDETECT -1
+#define SDCARDDETECT ORIG_SDCARDDETECT
 #define SDCARDDETECTINVERTED 0
 #endif
 #define SD_EXTENDED_DIR 1 /** Show extended directory including file length. Don't use this with Pronterface! */
@@ -988,7 +988,7 @@ Values must be in range 1..255
     "zProbeSwitchingDistance": 5,
     "zProbeRepetitions": 1,
     "sdSupport": "1",
-    "sdCardDetectPin": -1,
+    "sdCardDetectPin": "ORIG_SDCARDDETECT",
     "sdCardDetectInverted": "0",
     "uiStartScreenDelay": 1000,
     "xEndstopBackMove": 5,
