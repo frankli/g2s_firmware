@@ -197,7 +197,7 @@
 
 // ############# Heated bed configuration ########################
 
-#define HAVE_HEATED_BED 0
+#define HAVE_HEATED_BED 1
 #define HEATED_BED_MAX_TEMP 120
 #define SKIP_M190_IF_WITHIN 3
 #define HEATED_BED_SENSOR_TYPE 1
@@ -473,7 +473,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 
 #define Z_PROBE_Z_OFFSET 0
 #define Z_PROBE_Z_OFFSET_MODE 0
-#define UI_BED_COATING 1
+#define UI_BED_COATING 0
 #define FEATURE_Z_PROBE 1
 #define Z_PROBE_BED_DISTANCE 10
 #define Z_PROBE_PIN ORIG_Z_MIN_PIN
@@ -851,7 +851,7 @@ Values must be in range 1..255
     "servo2Pin": -1,
     "servo3Pin": -1,
     "featureWatchdog": "0",
-    "hasHeatedBed": "0",
+    "hasHeatedBed": "1",
     "enableZProbing": "1",
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_ZXY",
@@ -1136,7 +1136,7 @@ Values must be in range 1..255
     "zHomeHeatAll": "1",
     "zProbeZOffsetMode": 0,
     "zProbeZOffset": 0,
-    "uiBedCoating": "1",
+    "uiBedCoating": "0",
     "langEN": "1",
     "langDE": "0",
     "langNL": "0",
