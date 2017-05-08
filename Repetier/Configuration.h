@@ -95,7 +95,7 @@
 #define EXT0_ENABLE2_PIN ORIG_E0_ENABLE_PIN
 #define EXT0_MAX_FEEDRATE 50
 #define EXT0_MAX_START_FEEDRATE 20
-#define EXT0_MAX_ACCELERATION 500
+#define EXT0_MAX_ACCELERATION 2000
 #define EXT0_HEAT_MANAGER 3
 #define EXT0_WATCHPERIOD 1
 #define EXT0_PID_INTEGRAL_DRIVE_MAX 230
@@ -135,7 +135,7 @@
 #define EXT1_ENABLE2_PIN ORIG_E1_ENABLE_PIN
 #define EXT1_MAX_FEEDRATE 50
 #define EXT1_MAX_START_FEEDRATE 20
-#define EXT1_MAX_ACCELERATION 500
+#define EXT1_MAX_ACCELERATION 2000
 #define EXT1_HEAT_MANAGER 3
 #define EXT1_WATCHPERIOD 1
 #define EXT1_PID_INTEGRAL_DRIVE_MAX 230
@@ -328,7 +328,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z_MIN_POS 0
 #define DISTORTION_CORRECTION 1
 #define DISTORTION_CORRECTION_POINTS 5
-#define DISTORTION_CORRECTION_R 80
+#define DISTORTION_CORRECTION_R 70
 #define DISTORTION_PERMANENT 1
 #define DISTORTION_UPDATE_FREQUENCY 15
 #define DISTORTION_START_DEGRADE 0.5
@@ -371,7 +371,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DELTA_X_ENDSTOP_OFFSET_STEPS 0
 #define DELTA_Y_ENDSTOP_OFFSET_STEPS 0
 #define DELTA_Z_ENDSTOP_OFFSET_STEPS 0
-#define DELTA_FLOOR_SAFETY_MARGIN_MM 15
+#define DELTA_FLOOR_SAFETY_MARGIN_MM 0
 //#define SOFTWARE_LEVELING
 
 #define DELTASEGMENTS_PER_PRINTLINE 24
@@ -402,9 +402,9 @@ It also can add a delay to wait for spindle to run on full speed.
 #define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 1000
 #define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1000
 #define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 1000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 1000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 1000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 2000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 2000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 2000
 #define INTERPOLATE_ACCELERATION_WITH_Z 0
 #define ACCELERATION_FACTOR_TOP 100
 #define MAX_JERK 20
@@ -481,7 +481,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_ON_HIGH 0
 #define Z_PROBE_X_OFFSET -19
 #define Z_PROBE_Y_OFFSET -11
-#define Z_PROBE_WAIT_BEFORE_TEST 0
+#define Z_PROBE_WAIT_BEFORE_TEST 1
 #define Z_PROBE_SPEED 2
 #define Z_PROBE_XY_SPEED 150
 #define Z_PROBE_SWITCHING_DISTANCE 1
@@ -544,8 +544,8 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define LANGUAGE_CZ_ACTIVE 0
 #define LANGUAGE_PL_ACTIVE 0
 #define LANGUAGE_TR_ACTIVE 0
-#define UI_PRINTER_NAME "RepRap"
-#define UI_PRINTER_COMPANY "Home made"
+#define UI_PRINTER_NAME "G2S"
+#define UI_PRINTER_COMPANY ""
 #define UI_PAGES_DURATION 4000
 #define UI_ANIMATION 0
 #define UI_SPEEDDEPENDENT_POSITIONING 0
@@ -622,7 +622,7 @@ Values must be in range 1..255
             "startFeedrate": 20,
             "invert": "1",
             "invertEnable": "0",
-            "acceleration": 500,
+            "acceleration": 2000,
             "watchPeriod": 1,
             "pidP": 7,
             "pidI": 2,
@@ -675,7 +675,7 @@ Values must be in range 1..255
             "startFeedrate": 20,
             "invert": "0",
             "invertEnable": "0",
-            "acceleration": 500,
+            "acceleration": 2000,
             "watchPeriod": 1,
             "pidP": 7,
             "pidI": 2,
@@ -728,15 +728,15 @@ Values must be in range 1..255
     "driveSystem": 3,
     "xMaxSpeed": 200,
     "xHomingSpeed": 40,
-    "xTravelAcceleration": 1000,
+    "xTravelAcceleration": 2000,
     "xPrintAcceleration": 1000,
     "yMaxSpeed": 200,
     "yHomingSpeed": 40,
-    "yTravelAcceleration": 1000,
+    "yTravelAcceleration": 2000,
     "yPrintAcceleration": 1000,
     "zMaxSpeed": 200,
     "zHomingSpeed": 40,
-    "zTravelAcceleration": 1000,
+    "zTravelAcceleration": 2000,
     "zPrintAcceleration": 1000,
     "xMotor": {
         "name": "X motor",
@@ -790,7 +790,7 @@ Values must be in range 1..255
     "deltaDiagonalCorrB": 0,
     "deltaDiagonalCorrC": 0,
     "deltaMaxRadius": 100,
-    "deltaFloorSafetyMarginMM": 15,
+    "deltaFloorSafetyMarginMM": 0,
     "deltaRadiusCorrA": 0,
     "deltaRadiusCorrB": 0,
     "deltaRadiusCorrC": 0,
@@ -856,8 +856,8 @@ Values must be in range 1..255
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_ZXY",
     "featureController": 2,
-    "uiPrinterName": "RepRap",
-    "uiPrinterCompany": "Home made",
+    "uiPrinterName": "G2S",
+    "uiPrinterCompany": "",
     "uiPagesDuration": 4000,
     "uiAnimation": "0",
     "uiDisablePageswitch": "1",
@@ -966,7 +966,7 @@ Values must be in range 1..255
     "zProbeOnHigh": "0",
     "zProbeXOffset": -19,
     "zProbeYOffset": -11,
-    "zProbeWaitBeforeTest": "0",
+    "zProbeWaitBeforeTest": "1",
     "zProbeSpeed": 2,
     "zProbeXYSpeed": 150,
     "zProbeHeight": 2,
@@ -1017,7 +1017,7 @@ Values must be in range 1..255
     "pauseEndCommands": "",
     "distortionCorrection": "1",
     "distortionCorrectionPoints": 5,
-    "distortionCorrectionR": 80,
+    "distortionCorrectionR": 70,
     "distortionPermanent": "1",
     "distortionUpdateFrequency": 15,
     "distortionStartDegrade": 0.5,
