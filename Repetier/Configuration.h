@@ -77,8 +77,8 @@
 #define PAUSE_END_COMMANDS ""
 #define SHARED_EXTRUDER_HEATER 0
 #define EXT0_X_OFFSET 0
-#define EXT0_Y_OFFSET 0
-#define EXT0_Z_OFFSET -1040
+#define EXT0_Y_OFFSET -1040
+#define EXT0_Z_OFFSET 0
 #define EXT0_STEPS_PER_MM 93
 #define EXT0_TEMPSENSOR_TYPE 1
 #define EXT0_TEMPSENSOR_PIN TEMP_0_PIN
@@ -117,8 +117,8 @@
 #define EXT0_JAM_PIN -1
 #define EXT0_JAM_PULLUP 0
 #define EXT1_X_OFFSET 0
-#define EXT1_Y_OFFSET 0
-#define EXT1_Z_OFFSET 1040
+#define EXT1_Y_OFFSET 1040
+#define EXT1_Z_OFFSET 0
 #define EXT1_STEPS_PER_MM 93
 #define EXT1_TEMPSENSOR_TYPE 1
 #define EXT1_TEMPSENSOR_PIN TEMP_2_PIN
@@ -444,7 +444,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define ACK_WITH_LINENUMBER 1
 #define WAITING_IDENTIFIER "wait"
 #define ECHO_ON_EXECUTE 1
-#define EEPROM_MODE 1
+#define EEPROM_MODE 2
 #undef PS_ON_PIN
 #define PS_ON_PIN ORIG_PS_ON_PIN
 #define JSON_OUTPUT 0
@@ -603,7 +603,7 @@ Values must be in range 1..255
     "zStepsPerMM": 80,
     "xInvert": "1",
     "xInvertEnable": 0,
-    "eepromMode": 1,
+    "eepromMode": 2,
     "yInvert": "1",
     "yInvertEnable": 0,
     "zInvert": "1",
@@ -638,11 +638,11 @@ Values must be in range 1..255
             "selectCommands": "",
             "deselectCommands": "",
             "xOffset": 0,
-            "yOffset": 0,
-            "zOffset": -13,
+            "yOffset": -13,
+            "zOffset": 0,
             "xOffsetSteps": 0,
-            "yOffsetSteps": 0,
-            "zOffsetSteps": -1040,
+            "yOffsetSteps": -1040,
+            "zOffsetSteps": 0,
             "stepper": {
                 "name": "Extruder 0",
                 "step": "ORIG_E0_STEP_PIN",
@@ -691,11 +691,11 @@ Values must be in range 1..255
             "selectCommands": "",
             "deselectCommands": "",
             "xOffset": 0,
-            "yOffset": 0,
-            "zOffset": 13,
+            "yOffset": 13,
+            "zOffset": 0,
             "xOffsetSteps": 0,
-            "yOffsetSteps": 0,
-            "zOffsetSteps": 1040,
+            "yOffsetSteps": 1040,
+            "zOffsetSteps": 0,
             "stepper": {
                 "name": "Extruder 1",
                 "step": "ORIG_E1_STEP_PIN",
