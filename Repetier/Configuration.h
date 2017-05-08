@@ -484,7 +484,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_BED_DISTANCE 10
 #define Z_PROBE_PIN ORIG_Z_MIN_PIN
 #define Z_PROBE_PULLUP 1
-#define Z_PROBE_ON_HIGH 1
+#define Z_PROBE_ON_HIGH 0
 #define Z_PROBE_X_OFFSET -19
 #define Z_PROBE_Y_OFFSET -11
 #define Z_PROBE_WAIT_BEFORE_TEST 1
@@ -553,18 +553,18 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define UI_PRINTER_NAME "G2S"
 #define UI_PRINTER_COMPANY ""
 #define UI_PAGES_DURATION 4000
-#define UI_ANIMATION 0
+#define UI_ANIMATION 1
 #define UI_SPEEDDEPENDENT_POSITIONING 0
 #define UI_DISABLE_AUTO_PAGESWITCH 1
 #define UI_AUTORETURN_TO_MENU_AFTER 30000
 #define FEATURE_UI_KEYS 0
 #define UI_ENCODER_SPEED 1
-#define UI_REVERSE_ENCODER 0
+#define UI_REVERSE_ENCODER 1
 #define UI_KEY_BOUNCETIME 10
 #define UI_KEY_FIRST_REPEAT 500
 #define UI_KEY_REDUCE_REPEAT 50
 #define UI_KEY_MIN_REPEAT 50
-#define FEATURE_BEEPER 0
+#define FEATURE_BEEPER 1
 #define CASE_LIGHTS_PIN -1
 #define CASE_LIGHT_DEFAULT_ON 1
 #define UI_START_SCREEN_DELAY 1000
@@ -865,17 +865,17 @@ Values must be in range 1..255
     "uiPrinterName": "G2S",
     "uiPrinterCompany": "",
     "uiPagesDuration": 4000,
-    "uiAnimation": "0",
+    "uiAnimation": "1",
     "uiDisablePageswitch": "1",
     "uiAutoReturnAfter": 30000,
     "featureKeys": "0",
     "uiEncoderSpeed": 1,
-    "uiReverseEncoder": "0",
+    "uiReverseEncoder": "1",
     "uiKeyBouncetime": 10,
     "uiKeyFirstRepeat": 500,
     "uiKeyReduceRepeat": 50,
     "uiKeyMinRepeat": 50,
-    "featureBeeper": "0",
+    "featureBeeper": "1",
     "uiPresetBedTempPLA": 60,
     "uiPresetBedABS": 110,
     "uiPresetExtruderPLA": 190,
@@ -969,7 +969,7 @@ Values must be in range 1..255
     "zProbePin": "ORIG_Z_MIN_PIN",
     "zProbeBedDistance": 10,
     "zProbePullup": "1",
-    "zProbeOnHigh": "1",
+    "zProbeOnHigh": "0",
     "zProbeXOffset": -19,
     "zProbeYOffset": -11,
     "zProbeWaitBeforeTest": "1",
