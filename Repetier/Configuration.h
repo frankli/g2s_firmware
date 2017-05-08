@@ -37,7 +37,7 @@
 */
 
 #define NUM_EXTRUDER 2
-#define MOTHERBOARD 33
+#define MOTHERBOARD 37
 #include "pins.h"
 
 // ################## EDIT THESE SETTINGS MANUALLY ################
@@ -85,7 +85,7 @@
 #define EXT0_HEATER_PIN HEATER_0_PIN
 #define EXT0_STEP_PIN ORIG_E0_STEP_PIN
 #define EXT0_DIR_PIN ORIG_E0_DIR_PIN
-#define EXT0_INVERSE 0
+#define EXT0_INVERSE 1
 #define EXT0_ENABLE_PIN ORIG_E0_ENABLE_PIN
 #define EXT0_ENABLE_ON 0
 #define EXT0_MIRROR_STEPPER 0
@@ -314,9 +314,9 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DISABLE_Y 0
 #define DISABLE_Z 0
 #define DISABLE_E 0
-#define INVERT_X_DIR 0
-#define INVERT_Y_DIR 0
-#define INVERT_Z_DIR 0
+#define INVERT_X_DIR 1
+#define INVERT_Y_DIR 1
+#define INVERT_Z_DIR 1
 #define X_HOME_DIR -1
 #define Y_HOME_DIR -1
 #define Z_HOME_DIR 1
@@ -601,12 +601,12 @@ Values must be in range 1..255
     "xStepsPerMM": 80,
     "yStepsPerMM": 80,
     "zStepsPerMM": 80,
-    "xInvert": 0,
+    "xInvert": "1",
     "xInvertEnable": 0,
     "eepromMode": 1,
-    "yInvert": 0,
+    "yInvert": "1",
     "yInvertEnable": 0,
-    "zInvert": 0,
+    "zInvert": "1",
     "zInvertEnable": 0,
     "extruder": [
         {
@@ -620,7 +620,7 @@ Values must be in range 1..255
             "heaterPin": "HEATER_0_PIN",
             "maxFeedrate": 50,
             "startFeedrate": 20,
-            "invert": "0",
+            "invert": "1",
             "invertEnable": "0",
             "acceleration": 500,
             "watchPeriod": 1,
@@ -724,7 +724,7 @@ Values must be in range 1..255
     "xMaxEndstop": 1,
     "yMaxEndstop": 1,
     "zMaxEndstop": 1,
-    "motherboard": 33,
+    "motherboard": 37,
     "driveSystem": 3,
     "xMaxSpeed": 200,
     "xHomingSpeed": 40,
