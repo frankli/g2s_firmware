@@ -278,13 +278,13 @@ It also can add a delay to wait for spindle to run on full speed.
 #define ENDSTOP_Z_MIN_INVERTING false
 #define MIN_HARDWARE_ENDSTOP_Z false
 #define ENDSTOP_PULLUP_X_MAX true
-#define ENDSTOP_X_MAX_INVERTING true
+#define ENDSTOP_X_MAX_INVERTING false
 #define MAX_HARDWARE_ENDSTOP_X true
 #define ENDSTOP_PULLUP_Y_MAX true
-#define ENDSTOP_Y_MAX_INVERTING true
+#define ENDSTOP_Y_MAX_INVERTING false
 #define MAX_HARDWARE_ENDSTOP_Y true
 #define ENDSTOP_PULLUP_Z_MAX true
-#define ENDSTOP_Z_MAX_INVERTING true
+#define ENDSTOP_Z_MAX_INVERTING false
 #define MAX_HARDWARE_ENDSTOP_Z true
 #define max_software_endstop_r true
 
@@ -721,9 +721,9 @@ Values must be in range 1..255
     "xMinEndstop": 0,
     "yMinEndstop": 0,
     "zMinEndstop": 0,
-    "xMaxEndstop": 1,
-    "yMaxEndstop": 1,
-    "zMaxEndstop": 1,
+    "xMaxEndstop": 2,
+    "yMaxEndstop": 2,
+    "zMaxEndstop": 2,
     "motherboard": 37,
     "driveSystem": 3,
     "xMaxSpeed": 200,
