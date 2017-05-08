@@ -53,6 +53,12 @@
 #define FAN_THERMO_MAX_TEMP 60
 #define FAN_THERMO_THERMISTOR_PIN -1
 #define FAN_THERMO_THERMISTOR_TYPE 1
+#undef X_MIN_PIN
+#define X_MIN_PIN -1
+#undef Y_MIN_PIN
+#define Y_MIN_PIN -1
+#undef Z_MIN_PIN
+#define Z_MIN_PIN -1
 
 //#define EXTERNALSERIAL  use Arduino serial library instead of build in. Requires more ram, has only 63 byte input buffer.
 // Uncomment the following line if you are using Arduino compatible firmware made for Arduino version earlier then 1.0
@@ -276,7 +282,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define MIN_HARDWARE_ENDSTOP_Y false
 #define ENDSTOP_PULLUP_Z_MIN true
 #define ENDSTOP_Z_MIN_INVERTING false
-#define MIN_HARDWARE_ENDSTOP_Z true
+#define MIN_HARDWARE_ENDSTOP_Z false
 #define ENDSTOP_PULLUP_X_MAX true
 #define ENDSTOP_X_MAX_INVERTING false
 #define MAX_HARDWARE_ENDSTOP_X true
@@ -290,7 +296,7 @@ It also can add a delay to wait for spindle to run on full speed.
 
 #define min_software_endstop_x true
 #define min_software_endstop_y true
-#define min_software_endstop_z false
+#define min_software_endstop_z true
 #define max_software_endstop_x false
 #define max_software_endstop_y false
 #define max_software_endstop_z false
@@ -477,14 +483,14 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define FEATURE_Z_PROBE 1
 #define Z_PROBE_BED_DISTANCE 10
 #define Z_PROBE_PIN ORIG_Z_MIN_PIN
-#define Z_PROBE_PULLUP 0
-#define Z_PROBE_ON_HIGH 0
+#define Z_PROBE_PULLUP 1
+#define Z_PROBE_ON_HIGH 1
 #define Z_PROBE_X_OFFSET -19
 #define Z_PROBE_Y_OFFSET -11
 #define Z_PROBE_WAIT_BEFORE_TEST 1
 #define Z_PROBE_SPEED 2
 #define Z_PROBE_XY_SPEED 150
-#define Z_PROBE_SWITCHING_DISTANCE 1
+#define Z_PROBE_SWITCHING_DISTANCE 5
 #define Z_PROBE_REPETITIONS 1
 #define Z_PROBE_HEIGHT 2
 #define Z_PROBE_START_SCRIPT ""
@@ -720,7 +726,7 @@ Values must be in range 1..255
     "uiController": 0,
     "xMinEndstop": 0,
     "yMinEndstop": 0,
-    "zMinEndstop": 2,
+    "zMinEndstop": 0,
     "xMaxEndstop": 2,
     "yMaxEndstop": 2,
     "zMaxEndstop": 2,
@@ -962,8 +968,8 @@ Values must be in range 1..255
     "scalePidToMax": 0,
     "zProbePin": "ORIG_Z_MIN_PIN",
     "zProbeBedDistance": 10,
-    "zProbePullup": "0",
-    "zProbeOnHigh": "0",
+    "zProbePullup": "1",
+    "zProbeOnHigh": "1",
     "zProbeXOffset": -19,
     "zProbeYOffset": -11,
     "zProbeWaitBeforeTest": "1",
@@ -979,7 +985,7 @@ Values must be in range 1..255
     "zProbeY2": -70,
     "zProbeX3": -70,
     "zProbeY3": 70,
-    "zProbeSwitchingDistance": 1,
+    "zProbeSwitchingDistance": 5,
     "zProbeRepetitions": 1,
     "sdSupport": "1",
     "sdCardDetectPin": -1,
@@ -991,9 +997,9 @@ Values must be in range 1..255
     "xEndstopRetestFactor": 3,
     "yEndstopRetestFactor": 3,
     "zEndstopRetestFactor": 3,
-    "xMinPin": "ORIG_X_MIN_PIN",
-    "yMinPin": "ORIG_Y_MIN_PIN",
-    "zMinPin": "ORIG_Z_MIN_PIN",
+    "xMinPin": -1,
+    "yMinPin": -1,
+    "zMinPin": -1,
     "xMaxPin": "ORIG_X_MAX_PIN",
     "yMaxPin": "ORIG_Y_MAX_PIN",
     "zMaxPin": "ORIG_Z_MAX_PIN",
