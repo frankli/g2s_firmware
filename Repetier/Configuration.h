@@ -504,7 +504,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_Y2 -70
 #define Z_PROBE_X3 -70
 #define Z_PROBE_Y3 70
-#define BED_LEVELING_METHOD 0
+#define BED_LEVELING_METHOD 1
 #define BED_CORRECTION_METHOD 0
 #define BED_LEVELING_GRID_SIZE 5
 #define BED_LEVELING_REPETITIONS 5
@@ -599,7 +599,7 @@ Values must be in range 1..255
 
 ========== Start configuration string ==========
 {
-    "editMode": 1,
+    "editMode": 2,
     "processor": 0,
     "baudrate": 250000,
     "bluetoothSerial": -1,
@@ -1174,7 +1174,7 @@ Values must be in range 1..255
     "cncDirectionCW": "1",
     "startupGCode": "",
     "jsonOutput": "0",
-    "bedLevelingMethod": 0,
+    "bedLevelingMethod": 1,
     "bedCorrectionMethod": 0,
     "bedLevelingGridSize": 5,
     "bedLevelingRepetitions": 5,
