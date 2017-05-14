@@ -328,7 +328,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z_HOME_DIR 1
 #define X_MAX_LENGTH 200
 #define Y_MAX_LENGTH 200
-#define Z_MAX_LENGTH 198.9
+#define Z_MAX_LENGTH 198.5
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
@@ -773,7 +773,7 @@ Values must be in range 1..255
     "zMinPos": 0,
     "xLength": 200,
     "yLength": 200,
-    "zLength": 198.9,
+    "zLength": 198.5,
     "alwaysCheckEndstops": "1",
     "disableX": "0",
     "disableY": "0",
