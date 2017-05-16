@@ -122,8 +122,8 @@
 #define EXT0_DECOUPLE_TEST_PERIOD 12000
 #define EXT0_JAM_PIN -1
 #define EXT0_JAM_PULLUP 0
-#define EXT1_X_OFFSET 0
-#define EXT1_Y_OFFSET 1040
+#define EXT1_X_OFFSET 80
+#define EXT1_Y_OFFSET 1062
 #define EXT1_Z_OFFSET 0
 #define EXT1_STEPS_PER_MM 93
 #define EXT1_TEMPSENSOR_TYPE 1
@@ -328,7 +328,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z_HOME_DIR 1
 #define X_MAX_LENGTH 200
 #define Y_MAX_LENGTH 200
-#define Z_MAX_LENGTH 198.6
+#define Z_MAX_LENGTH 200.6
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
@@ -477,7 +477,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 
 // #################### Z-Probing #####################
 
-#define Z_PROBE_Z_OFFSET 0
+#define Z_PROBE_Z_OFFSET 2
 #define Z_PROBE_Z_OFFSET_MODE 0
 #define UI_BED_COATING 0
 #define FEATURE_Z_PROBE 1
@@ -696,11 +696,11 @@ Values must be in range 1..255
             "coolerSpeed": 255,
             "selectCommands": "",
             "deselectCommands": "",
-            "xOffset": 0,
-            "yOffset": 13,
+            "xOffset": 1,
+            "yOffset": 13.28,
             "zOffset": 0,
-            "xOffsetSteps": 0,
-            "yOffsetSteps": 1040,
+            "xOffsetSteps": 80,
+            "yOffsetSteps": 1062,
             "zOffsetSteps": 0,
             "stepper": {
                 "name": "Extruder 1",
@@ -773,7 +773,7 @@ Values must be in range 1..255
     "zMinPos": 0,
     "xLength": 200,
     "yLength": 200,
-    "zLength": 198.6,
+    "zLength": 200.6,
     "alwaysCheckEndstops": "1",
     "disableX": "0",
     "disableY": "0",
@@ -1141,7 +1141,7 @@ Values must be in range 1..255
     "zHomeHeatHeight": 20,
     "zHomeHeatAll": "1",
     "zProbeZOffsetMode": 0,
-    "zProbeZOffset": 0,
+    "zProbeZOffset": 2,
     "uiBedCoating": "0",
     "langEN": "1",
     "langDE": "0",
