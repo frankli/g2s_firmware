@@ -328,7 +328,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define ENDSTOP_X_BACK_ON_HOME 0
 #define ENDSTOP_Y_BACK_ON_HOME 0
 #define ENDSTOP_Z_BACK_ON_HOME 0
-#define ALWAYS_CHECK_ENDSTOPS 1
+#define ALWAYS_CHECK_ENDSTOPS 0
 #define MOVE_X_WHEN_HOMED 0
 #define MOVE_Y_WHEN_HOMED 0
 #define MOVE_Z_WHEN_HOMED 0
@@ -484,7 +484,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define KEEP_ALIVE_INTERVAL 2000
 #define WAITING_IDENTIFIER "wait"
 #define ECHO_ON_EXECUTE 1
-#define EEPROM_MODE 1
+#define EEPROM_MODE 0
 #undef PS_ON_PIN
 #define PS_ON_PIN ORIG_PS_ON_PIN
 #define JSON_OUTPUT 0
@@ -518,8 +518,8 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define EXTRUDER_IS_Z_PROBE 0
 #define Z_PROBE_BED_DISTANCE 20
 #define Z_PROBE_PIN ORIG_Z_MIN_PIN
-#define Z_PROBE_PULLUP 0
-#define Z_PROBE_ON_HIGH 1
+#define Z_PROBE_PULLUP 1
+#define Z_PROBE_ON_HIGH 0
 #define Z_PROBE_X_OFFSET -19
 #define Z_PROBE_Y_OFFSET -11
 #define Z_PROBE_WAIT_BEFORE_TEST 0
@@ -641,7 +641,7 @@ Values must be in range 1..255
     "zStepsPerMM": 80,
     "xInvert": "1",
     "xInvertEnable": 0,
-    "eepromMode": 1,
+    "eepromMode": 0,
     "yInvert": "1",
     "yInvertEnable": 0,
     "zInvert": "1",
@@ -808,7 +808,7 @@ Values must be in range 1..255
     "xLength": 200,
     "yLength": 200,
     "zLength": 203.6,
-    "alwaysCheckEndstops": "1",
+    "alwaysCheckEndstops": "0",
     "disableX": "0",
     "disableY": "0",
     "disableZ": "0",
@@ -1006,8 +1006,8 @@ Values must be in range 1..255
     "scalePidToMax": 0,
     "zProbePin": "ORIG_Z_MIN_PIN",
     "zProbeBedDistance": 20,
-    "zProbePullup": "0",
-    "zProbeOnHigh": "1",
+    "zProbePullup": "1",
+    "zProbeOnHigh": "0",
     "zProbeXOffset": -19,
     "zProbeYOffset": -11,
     "zProbeWaitBeforeTest": "0",
