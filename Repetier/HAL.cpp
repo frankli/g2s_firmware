@@ -349,10 +349,22 @@ void HAL::analogStart()
 
 #include <avr/io.h>
 
+/****************************************************************************************
+ Setting for I2C Clock speed. needed to change  clock speed for different peripherals
+ here is just the same as i2cInit  , added to be compatible to DUE Version
+****************************************************************************************/
+
+void HAL::i2cSetClockspeed(uint32_t clockSpeedHz)
+{
+    /* initialize TWI clock: 100 kHz clock, TWPS = 0 => prescaler = 1 */
+    TWSR = 0;                         /* no prescaler */
+    TWBR = ((F_CPU/clockSpeedHz)-16)/2;  /* must be > 10 for stable operation */
+}
+
 /*************************************************************************
  Initialization of the I2C bus interface. Need to be called only once
 *************************************************************************/
-void HAL::i2cInit(unsigned long clockSpeedHz)
+void HAL::i2cInit(uint32_t clockSpeedHz)
 {
     /* initialize TWI clock: 100 kHz clock, TWPS = 0 => prescaler = 1 */
     TWSR = 0;                         /* no prescaler */
@@ -364,7 +376,7 @@ void HAL::i2cInit(unsigned long clockSpeedHz)
   Issues a start condition and sends address and transfer direction.
   return 0 = device accessible, 1= failed to access device
 *************************************************************************/
-unsigned char HAL::i2cStart(unsigned char address)
+unsigned char HAL::i2cStart(uint8_t address)
 {
     uint8_t   twst;
 
@@ -460,18 +472,18 @@ void HAL::i2cStop(void)
   Return:   0 write successful
             1 write failed
 *************************************************************************/
-unsigned char HAL::i2cWrite( unsigned char data )
+void HAL::i2cWrite( unsigned char data )
 {
-    uint8_t   twst;
+    //uint8_t   twst;
     // send data to the previously addressed device
     TWDR = data;
     TWCR = (1<<TWINT) | (1<<TWEN);
     // wait until transmission completed
     while(!(TWCR & (1<<TWINT)));
     // check value of TWI Status Register. Mask prescaler bits
-    twst = TW_STATUS & 0xF8;
-    if( twst != TW_MT_DATA_ACK) return 1;
-    return 0;
+    //twst = TW_STATUS & 0xF8;
+    //if( twst != TW_MT_DATA_ACK) return 1;
+    //return 0;
 }
 
 
@@ -499,7 +511,7 @@ unsigned char HAL::i2cReadNak(void)
 }
 
 #if FEATURE_SERVO
-#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__) || defined(__AVR_AT90USB646__) || defined(__AVR_AT90USB1286__) || defined(__AVR_ATmega128__) ||defined(__AVR_ATmega1281__)||defined(__AVR_ATmega2561__)
+#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__) || defined(__AVR_AT90USB646__) || defined(__AVR_AT90USB1286__) || defined(__AVR_ATmega128__) || defined(__AVR_ATmega1281__) || defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega2561__)
 #define SERVO2500US F_CPU/3200
 #define SERVO5000US F_CPU/1600
 unsigned int HAL::servoTimings[4] = {0,0,0,0};
@@ -507,8 +519,8 @@ unsigned int servoAutoOff[4] = {0,0,0,0};
 static uint8_t servoIndex = 0;
 void HAL::servoMicroseconds(uint8_t servo,int ms, uint16_t autoOff)
 {
-    if(ms<500) ms = 0;
-    if(ms>2500) ms = 2500;
+    if(ms < 500) ms = 0;
+    if(ms > 2500) ms = 2500;
     servoTimings[servo] = (unsigned int)(((F_CPU/1000000)*(long)ms)>>3);
     servoAutoOff[servo] = (ms) ? (autoOff / 20) : 0;
 }
@@ -520,7 +532,7 @@ SIGNAL (TIMER3_COMPA_vect)
         TCNT3 = 0;
         if(HAL::servoTimings[0])
         {
-#if SERVO0_PIN>-1
+#if SERVO0_PIN > -1
             WRITE(SERVO0_PIN,HIGH);
 #endif
             OCR3A = HAL::servoTimings[0];
@@ -528,7 +540,7 @@ SIGNAL (TIMER3_COMPA_vect)
         else OCR3A = SERVO2500US;
         break;
     case 1:
-#if SERVO0_PIN>-1
+#if SERVO0_PIN > -1
         WRITE(SERVO0_PIN,LOW);
 #endif
         OCR3A = SERVO5000US;
@@ -537,7 +549,7 @@ SIGNAL (TIMER3_COMPA_vect)
         TCNT3 = 0;
         if(HAL::servoTimings[1])
         {
-#if SERVO1_PIN>-1
+#if SERVO1_PIN > -1
             WRITE(SERVO1_PIN,HIGH);
 #endif
             OCR3A = HAL::servoTimings[1];
@@ -545,7 +557,7 @@ SIGNAL (TIMER3_COMPA_vect)
         else OCR3A = SERVO2500US;
         break;
     case 3:
-#if SERVO1_PIN>-1
+#if SERVO1_PIN > -1
         WRITE(SERVO1_PIN,LOW);
 #endif
         OCR3A = SERVO5000US;
@@ -554,7 +566,7 @@ SIGNAL (TIMER3_COMPA_vect)
         TCNT3 = 0;
         if(HAL::servoTimings[2])
         {
-#if SERVO2_PIN>-1
+#if SERVO2_PIN > -1
             WRITE(SERVO2_PIN,HIGH);
 #endif
             OCR3A = HAL::servoTimings[2];
@@ -562,7 +574,7 @@ SIGNAL (TIMER3_COMPA_vect)
         else OCR3A = SERVO2500US;
         break;
     case 5:
-#if SERVO2_PIN>-1
+#if SERVO2_PIN > -1
         WRITE(SERVO2_PIN,LOW);
 #endif
         OCR3A = SERVO5000US;
@@ -571,7 +583,7 @@ SIGNAL (TIMER3_COMPA_vect)
         TCNT3 = 0;
         if(HAL::servoTimings[3])
         {
-#if SERVO3_PIN>-1
+#if SERVO3_PIN > -1
             WRITE(SERVO3_PIN,HIGH);
 #endif
             OCR3A = HAL::servoTimings[3];
@@ -579,7 +591,7 @@ SIGNAL (TIMER3_COMPA_vect)
         else OCR3A = SERVO2500US;
         break;
     case 7:
-#if SERVO3_PIN>-1
+#if SERVO3_PIN > -1
         WRITE(SERVO3_PIN,LOW);
 #endif
         OCR3A = SERVO5000US;
@@ -595,13 +607,15 @@ SIGNAL (TIMER3_COMPA_vect)
         }
     }
     servoIndex++;
-    if(servoIndex>7)
+    if(servoIndex > 7)
         servoIndex = 0;
 }
 #else
 #error No servo support for your board, please diable FEATURE_SERVO
 #endif
 #endif
+
+long __attribute__((used)) stepperWait = 0;
 
 // ================== Interrupt handling ======================
 
@@ -644,6 +658,7 @@ inline void setTimer(uint32_t delay)
         "sts	%[ocr]+1, %D[delay] \n\t"
         "sts	%[ocr], r1 \n\t"
         "end%=: \n\t"
+        //:[delay]"=&d"(delay),[stepperWait]"=&d"(stepperWait) // Output
         :[delay]"=&d"(delay) // Output
         :"0"(delay),[ocr]"i" (_SFR_MEM_ADDR(OCR1A)),[time]"i"(_SFR_MEM_ADDR(TCNT1)) // Input
         :"r18" // Clobber
@@ -663,7 +678,6 @@ inline void setTimer(uint32_t delay)
 }
 
 volatile uint8_t insideTimer1 = 0;
-long __attribute__((used)) stepperWait = 0;
 /** \brief Timer interrupt routine to drive the stepper motors.
 */
 ISR(TIMER1_COMPA_vect)
@@ -694,6 +708,7 @@ ISR(TIMER1_COMPA_vect)
         "end1%=: ldi %[ex],1 \n\t"
         "end%=: \n\t"
         :[ex]"=&d"(doExit):[ocr]"i" (_SFR_MEM_ADDR(OCR1A)):"r22","r23" );
+//        :[ex]"=&d"(doExit),[stepperWait]"=&d"(stepperWait):[ocr]"i" (_SFR_MEM_ADDR(OCR1A)):"r22","r23" );
     if(doExit) return;
     insideTimer1 = 1;
     OCR1A = 61000;
@@ -701,11 +716,13 @@ ISR(TIMER1_COMPA_vect)
     {
         setTimer(PrintLine::bresenhamStep());
     }
-    else if(FEATURE_BABYSTEPPING && Printer::zBabystepsMissing)
+#if FEATURE_BABYSTEPPING    
+    else if(Printer::zBabystepsMissing)
     {
         Printer::zBabystep();
         setTimer(Printer::interval);
     }
+#endif    
     else
     {
         if(waitRelax == 0)
@@ -727,7 +744,7 @@ ISR(TIMER1_COMPA_vect)
 #endif
         }
         else waitRelax--;
-        stepperWait = 0; // Importent becaus of optimization in asm at begin
+        stepperWait = 0; // Important because of optimization in asm at begin
         OCR1A = 65500; // Wait for next move
     }
     DEBUG_MEMORY;
@@ -740,8 +757,8 @@ ISR(TIMER1_COMPA_vect)
 #if HEATER_PWM_SPEED < 0
 #define HEATER_PWM_SPEED 0
 #endif
-#if HEATER_PWM_SPEED > 2
-#define HEATER_PWM_SPEED 2
+#if HEATER_PWM_SPEED > 4
+#define HEATER_PWM_SPEED 4
 #endif
 
 #if HEATER_PWM_SPEED == 0
@@ -750,9 +767,15 @@ ISR(TIMER1_COMPA_vect)
 #elif HEATER_PWM_SPEED == 1
 #define HEATER_PWM_STEP 2
 #define HEATER_PWM_MASK 254
-#else
+#elif HEATER_PWM_SPEED == 2
 #define HEATER_PWM_STEP 4
 #define HEATER_PWM_MASK 252
+#elif HEATER_PWM_SPEED == 3
+#define HEATER_PWM_STEP 8
+#define HEATER_PWM_MASK 248
+#elif HEATER_PWM_SPEED == 4
+#define HEATER_PWM_STEP 16
+#define HEATER_PWM_MASK 240
 #endif
 
 #if !defined(COOLER_PWM_SPEED)
@@ -761,8 +784,8 @@ ISR(TIMER1_COMPA_vect)
 #if COOLER_PWM_SPEED < 0
 #define COOLER_PWM_SPEED 0
 #endif
-#if COOLER_PWM_SPEED > 2
-#define COOLER_PWM_SPEED 2
+#if COOLER_PWM_SPEED > 4
+#define COOLER_PWM_SPEED 4
 #endif
 
 #if COOLER_PWM_SPEED == 0
@@ -771,9 +794,15 @@ ISR(TIMER1_COMPA_vect)
 #elif COOLER_PWM_SPEED == 1
 #define COOLER_PWM_STEP 2
 #define COOLER_PWM_MASK 254
-#else
+#elif COOLER_PWM_SPEED == 2
 #define COOLER_PWM_STEP 4
 #define COOLER_PWM_MASK 252
+#elif COOLER_PWM_SPEED == 3
+#define COOLER_PWM_STEP 8
+#define COOLER_PWM_MASK 248
+#elif COOLER_PWM_SPEED == 4
+#define COOLER_PWM_STEP 16
+#define COOLER_PWM_MASK 240
 #endif
 
 #define pulseDensityModulate( pin, density,error,invert) {uint8_t carry;carry = error + (invert ? 255 - density : density); WRITE(pin, (carry < error)); error = carry;}
