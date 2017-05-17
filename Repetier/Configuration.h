@@ -350,7 +350,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z_HOME_DIR 1
 #define X_MAX_LENGTH 200
 #define Y_MAX_LENGTH 200
-#define Z_MAX_LENGTH 203.5
+#define Z_MAX_LENGTH 203.6
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
@@ -416,7 +416,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define HOMING_ORDER HOME_ORDER_ZXY
 #define ZHOME_PRE_RAISE 0
 #define ZHOME_PRE_RAISE_DISTANCE 10
-#define RAISE_Z_ON_TOOLCHANGE 5
+#define RAISE_Z_ON_TOOLCHANGE 0
 #define ZHOME_MIN_TEMPERATURE 0
 #define ZHOME_HEAT_ALL 1
 #define ZHOME_HEAT_HEIGHT 20
@@ -516,16 +516,16 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define UI_BED_COATING 0
 #define FEATURE_Z_PROBE 1
 #define EXTRUDER_IS_Z_PROBE 0
-#define Z_PROBE_BED_DISTANCE 10
+#define Z_PROBE_BED_DISTANCE 20
 #define Z_PROBE_PIN ORIG_Z_MIN_PIN
-#define Z_PROBE_PULLUP 1
-#define Z_PROBE_ON_HIGH 0
+#define Z_PROBE_PULLUP 0
+#define Z_PROBE_ON_HIGH 1
 #define Z_PROBE_X_OFFSET -19
 #define Z_PROBE_Y_OFFSET -11
-#define Z_PROBE_WAIT_BEFORE_TEST 1
+#define Z_PROBE_WAIT_BEFORE_TEST 0
 #define Z_PROBE_SPEED 2
 #define Z_PROBE_XY_SPEED 150
-#define Z_PROBE_SWITCHING_DISTANCE 5
+#define Z_PROBE_SWITCHING_DISTANCE 10
 #define Z_PROBE_REPETITIONS 1
 #define Z_PROBE_HEIGHT 2
 #define Z_PROBE_START_SCRIPT ""
@@ -807,7 +807,7 @@ Values must be in range 1..255
     "zMinPos": 0,
     "xLength": 200,
     "yLength": 200,
-    "zLength": 203.5,
+    "zLength": 203.6,
     "alwaysCheckEndstops": "1",
     "disableX": "0",
     "disableY": "0",
@@ -1005,12 +1005,12 @@ Values must be in range 1..255
     "fanThermoThermistorType": 1,
     "scalePidToMax": 0,
     "zProbePin": "ORIG_Z_MIN_PIN",
-    "zProbeBedDistance": 10,
-    "zProbePullup": "1",
-    "zProbeOnHigh": "0",
+    "zProbeBedDistance": 20,
+    "zProbePullup": "0",
+    "zProbeOnHigh": "1",
     "zProbeXOffset": -19,
     "zProbeYOffset": -11,
-    "zProbeWaitBeforeTest": "1",
+    "zProbeWaitBeforeTest": "0",
     "zProbeSpeed": 2,
     "zProbeXYSpeed": 150,
     "zProbeHeight": 2,
@@ -1023,7 +1023,7 @@ Values must be in range 1..255
     "zProbeY2": -70,
     "zProbeX3": -70,
     "zProbeY3": 70,
-    "zProbeSwitchingDistance": 5,
+    "zProbeSwitchingDistance": 10,
     "zProbeRepetitions": 1,
     "zProbeEveryPoint": "",
     "sdSupport": "1",
@@ -1283,7 +1283,7 @@ Values must be in range 1..255
     "dualXResolution": "0",
     "x2axisStepsPerMM": 100,
     "coolerPWMSpeed": 0,
-    "raiseZOnToolchange": 5,
+    "raiseZOnToolchange": 0,
     "uiAnimation": "0",
     "uiPresetBedTempPLA": 60,
     "uiPresetBedABS": 110,
