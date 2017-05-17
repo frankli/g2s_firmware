@@ -125,7 +125,7 @@
 #define EXT0_JAM_PIN -1
 #define EXT0_JAM_PULLUP 0
 #define EXT1_X_OFFSET 0
-#define EXT1_Y_OFFSET 1152
+#define EXT1_Y_OFFSET 1080
 #define EXT1_Z_OFFSET 0
 #define EXT1_STEPS_PER_MM 93
 #define EXT1_TEMPSENSOR_TYPE 1
@@ -730,10 +730,10 @@ Values must be in range 1..255
             "selectCommands": "",
             "deselectCommands": "",
             "xOffset": 0,
-            "yOffset": 14.4,
+            "yOffset": 13.5,
             "zOffset": 0,
             "xOffsetSteps": 0,
-            "yOffsetSteps": 1152,
+            "yOffsetSteps": 1080,
             "zOffsetSteps": 0,
             "stepper": {
                 "name": "Extruder 1",
