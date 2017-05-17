@@ -358,7 +358,7 @@ It also can add a delay to wait for spindle to run on full speed.
 
 #define DISTORTION_CORRECTION 1
 #define DISTORTION_CORRECTION_POINTS 5
-#define DISTORTION_CORRECTION_R 70
+#define DISTORTION_CORRECTION_R 60
 #define DISTORTION_PERMANENT 1
 #define DISTORTION_UPDATE_FREQUENCY 15
 #define DISTORTION_START_DEGRADE 0.5
@@ -484,7 +484,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define KEEP_ALIVE_INTERVAL 2000
 #define WAITING_IDENTIFIER "wait"
 #define ECHO_ON_EXECUTE 1
-#define EEPROM_MODE 0
+#define EEPROM_MODE 1
 #undef PS_ON_PIN
 #define PS_ON_PIN ORIG_PS_ON_PIN
 #define JSON_OUTPUT 0
@@ -535,12 +535,12 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_MIN_TEMPERATURE 150
 #define FEATURE_AUTOLEVEL 1
 #define FEATURE_SOFTWARE_LEVELING 0
-#define Z_PROBE_X1 -70
-#define Z_PROBE_Y1 -70
-#define Z_PROBE_X2 70
-#define Z_PROBE_Y2 -70
-#define Z_PROBE_X3 -70
-#define Z_PROBE_Y3 70
+#define Z_PROBE_X1 -60
+#define Z_PROBE_Y1 -60
+#define Z_PROBE_X2 60
+#define Z_PROBE_Y2 -60
+#define Z_PROBE_X3 -60
+#define Z_PROBE_Y3 60
 #define BED_LEVELING_METHOD 1
 #define BED_CORRECTION_METHOD 0
 #define BED_LEVELING_GRID_SIZE 5
@@ -641,7 +641,7 @@ Values must be in range 1..255
     "zStepsPerMM": 80,
     "xInvert": "1",
     "xInvertEnable": 0,
-    "eepromMode": 0,
+    "eepromMode": 1,
     "yInvert": "1",
     "yInvertEnable": 0,
     "zInvert": "1",
@@ -1017,12 +1017,12 @@ Values must be in range 1..255
     "zProbeStartScript": "",
     "zProbeFinishedScript": "",
     "featureAutolevel": "1",
-    "zProbeX1": -70,
-    "zProbeY1": -70,
-    "zProbeX2": 70,
-    "zProbeY2": -70,
-    "zProbeX3": -70,
-    "zProbeY3": 70,
+    "zProbeX1": -60,
+    "zProbeY1": -60,
+    "zProbeX2": 60,
+    "zProbeY2": -60,
+    "zProbeX3": -60,
+    "zProbeY3": 60,
     "zProbeSwitchingDistance": 10,
     "zProbeRepetitions": 1,
     "zProbeEveryPoint": "",
@@ -1062,7 +1062,7 @@ Values must be in range 1..255
     "pauseEndCommands": "",
     "distortionCorrection": "1",
     "distortionCorrectionPoints": 5,
-    "distortionCorrectionR": 70,
+    "distortionCorrectionR": 60,
     "distortionPermanent": "1",
     "distortionUpdateFrequency": 15,
     "distortionStartDegrade": 0.5,
