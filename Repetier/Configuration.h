@@ -484,7 +484,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define KEEP_ALIVE_INTERVAL 2000
 #define WAITING_IDENTIFIER "wait"
 #define ECHO_ON_EXECUTE 1
-#define EEPROM_MODE 1
+#define EEPROM_MODE 2
 #undef PS_ON_PIN
 #define PS_ON_PIN ORIG_PS_ON_PIN
 #define JSON_OUTPUT 0
@@ -526,8 +526,8 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_SPEED 2
 #define Z_PROBE_XY_SPEED 150
 #define Z_PROBE_SWITCHING_DISTANCE 10
-#define Z_PROBE_REPETITIONS 1
-#define Z_PROBE_HEIGHT 4.6
+#define Z_PROBE_REPETITIONS 2
+#define Z_PROBE_HEIGHT 5.11
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
 #define Z_PROBE_RUN_AFTER_EVERY_PROBE ""
@@ -537,10 +537,10 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define FEATURE_SOFTWARE_LEVELING 0
 #define Z_PROBE_X1 -60
 #define Z_PROBE_Y1 -60
-#define Z_PROBE_X2 60
+#define Z_PROBE_X2 50
 #define Z_PROBE_Y2 -60
 #define Z_PROBE_X3 -60
-#define Z_PROBE_Y3 60
+#define Z_PROBE_Y3 50
 #define BED_LEVELING_METHOD 1
 #define BED_CORRECTION_METHOD 0
 #define BED_LEVELING_GRID_SIZE 5
@@ -641,7 +641,7 @@ Values must be in range 1..255
     "zStepsPerMM": 80,
     "xInvert": "1",
     "xInvertEnable": 0,
-    "eepromMode": 1,
+    "eepromMode": 2,
     "yInvert": "1",
     "yInvertEnable": 0,
     "zInvert": "1",
@@ -1013,18 +1013,18 @@ Values must be in range 1..255
     "zProbeWaitBeforeTest": "0",
     "zProbeSpeed": 2,
     "zProbeXYSpeed": 150,
-    "zProbeHeight": 4.6,
+    "zProbeHeight": 5.11,
     "zProbeStartScript": "",
     "zProbeFinishedScript": "",
     "featureAutolevel": "1",
     "zProbeX1": -60,
     "zProbeY1": -60,
-    "zProbeX2": 60,
+    "zProbeX2": 50,
     "zProbeY2": -60,
     "zProbeX3": -60,
-    "zProbeY3": 60,
+    "zProbeY3": 50,
     "zProbeSwitchingDistance": 10,
-    "zProbeRepetitions": 1,
+    "zProbeRepetitions": 2,
     "zProbeEveryPoint": "",
     "sdSupport": "1",
     "sdCardDetectPin": "ORIG_SDCARDDETECT",
