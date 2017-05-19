@@ -102,7 +102,7 @@
 #define EXT0_ENABLE2_PIN ORIG_E0_ENABLE_PIN
 #define EXT0_MAX_FEEDRATE 50
 #define EXT0_MAX_START_FEEDRATE 20
-#define EXT0_MAX_ACCELERATION 2000
+#define EXT0_MAX_ACCELERATION 5000
 #define EXT0_HEAT_MANAGER 3
 #define EXT0_PREHEAT_TEMP 190
 #define EXT0_WATCHPERIOD 1
@@ -143,7 +143,7 @@
 #define EXT1_ENABLE2_PIN ORIG_E1_ENABLE_PIN
 #define EXT1_MAX_FEEDRATE 50
 #define EXT1_MAX_START_FEEDRATE 20
-#define EXT1_MAX_ACCELERATION 2000
+#define EXT1_MAX_ACCELERATION 5000
 #define EXT1_HEAT_MANAGER 3
 #define EXT1_PREHEAT_TEMP 190
 #define EXT1_WATCHPERIOD 1
@@ -393,7 +393,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DELTA_DIAGONAL_CORRECTION_C 0
 #define END_EFFECTOR_HORIZONTAL_OFFSET 0
 #define CARRIAGE_HORIZONTAL_OFFSET 0
-#define DELTA_MAX_RADIUS 100
+#define DELTA_MAX_RADIUS 110
 #define ROD_RADIUS 92
 #define PRINTER_RADIUS 92
 #define DELTA_HOME_ON_POWER 0
@@ -535,13 +535,13 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_MIN_TEMPERATURE 150
 #define FEATURE_AUTOLEVEL 1
 #define FEATURE_SOFTWARE_LEVELING 0
-#define Z_PROBE_X1 -60
-#define Z_PROBE_Y1 -60
-#define Z_PROBE_X2 50
-#define Z_PROBE_Y2 -60
-#define Z_PROBE_X3 -60
-#define Z_PROBE_Y3 50
-#define BED_LEVELING_METHOD 1
+#define Z_PROBE_X1 -45
+#define Z_PROBE_Y1 -77
+#define Z_PROBE_X2 45
+#define Z_PROBE_Y2 -77
+#define Z_PROBE_X3 0
+#define Z_PROBE_Y3 90
+#define BED_LEVELING_METHOD 0
 #define BED_CORRECTION_METHOD 0
 #define BED_LEVELING_GRID_SIZE 5
 #define BED_LEVELING_REPETITIONS 5
@@ -660,7 +660,7 @@ Values must be in range 1..255
             "startFeedrate": 20,
             "invert": "0",
             "invertEnable": "0",
-            "acceleration": 2000,
+            "acceleration": 5000,
             "watchPeriod": 1,
             "pidP": 7,
             "pidI": 2,
@@ -714,7 +714,7 @@ Values must be in range 1..255
             "startFeedrate": 20,
             "invert": "0",
             "invertEnable": "0",
-            "acceleration": 2000,
+            "acceleration": 5000,
             "watchPeriod": 1,
             "pidP": 7,
             "pidI": 2,
@@ -829,7 +829,7 @@ Values must be in range 1..255
     "deltaDiagonalCorrA": 0,
     "deltaDiagonalCorrB": 0,
     "deltaDiagonalCorrC": 0,
-    "deltaMaxRadius": 100,
+    "deltaMaxRadius": 110,
     "deltaFloorSafetyMarginMM": 0,
     "deltaRadiusCorrA": 0,
     "deltaRadiusCorrB": 0,
@@ -1017,12 +1017,12 @@ Values must be in range 1..255
     "zProbeStartScript": "",
     "zProbeFinishedScript": "",
     "featureAutolevel": "1",
-    "zProbeX1": -60,
-    "zProbeY1": -60,
-    "zProbeX2": 50,
-    "zProbeY2": -60,
-    "zProbeX3": -60,
-    "zProbeY3": 50,
+    "zProbeX1": -45,
+    "zProbeY1": -77,
+    "zProbeX2": 45,
+    "zProbeY2": -77,
+    "zProbeX3": 0,
+    "zProbeY3": 90,
     "zProbeSwitchingDistance": 10,
     "zProbeRepetitions": 1,
     "zProbeEveryPoint": "",
@@ -1249,7 +1249,7 @@ Values must be in range 1..255
     "cncRpmMax": 8000,
     "startupGCode": "",
     "jsonOutput": "0",
-    "bedLevelingMethod": 1,
+    "bedLevelingMethod": 0,
     "bedCorrectionMethod": 0,
     "bedLevelingGridSize": 5,
     "bedLevelingRepetitions": 5,
