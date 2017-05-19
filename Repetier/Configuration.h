@@ -168,10 +168,10 @@
 
 #define FEATURE_RETRACTION 1
 #define AUTORETRACT_ENABLED 0
-#define RETRACTION_LENGTH 3
+#define RETRACTION_LENGTH 5
 #define RETRACTION_LONG_LENGTH 13
 #define RETRACTION_SPEED 40
-#define RETRACTION_Z_LIFT 0
+#define RETRACTION_Z_LIFT 2
 #define RETRACTION_UNDO_EXTRA_LENGTH 0
 #define RETRACTION_UNDO_EXTRA_LONG_LENGTH 0
 #define RETRACTION_UNDO_SPEED 20
@@ -526,8 +526,8 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_SPEED 2
 #define Z_PROBE_XY_SPEED 150
 #define Z_PROBE_SWITCHING_DISTANCE 10
-#define Z_PROBE_REPETITIONS 2
-#define Z_PROBE_HEIGHT 5.11
+#define Z_PROBE_REPETITIONS 1
+#define Z_PROBE_HEIGHT 4.9
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
 #define Z_PROBE_RUN_AFTER_EVERY_PROBE ""
@@ -1013,7 +1013,7 @@ Values must be in range 1..255
     "zProbeWaitBeforeTest": "0",
     "zProbeSpeed": 2,
     "zProbeXYSpeed": 150,
-    "zProbeHeight": 5.11,
+    "zProbeHeight": 4.9,
     "zProbeStartScript": "",
     "zProbeFinishedScript": "",
     "featureAutolevel": "1",
@@ -1024,7 +1024,7 @@ Values must be in range 1..255
     "zProbeX3": -60,
     "zProbeY3": 50,
     "zProbeSwitchingDistance": 10,
-    "zProbeRepetitions": 2,
+    "zProbeRepetitions": 1,
     "zProbeEveryPoint": "",
     "sdSupport": "1",
     "sdCardDetectPin": "ORIG_SDCARDDETECT",
@@ -1076,10 +1076,10 @@ Values must be in range 1..255
     "sdStopHeaterMotorsOnStop": "1",
     "featureRetraction": "1",
     "autoretractEnabled": "0",
-    "retractionLength": 3,
+    "retractionLength": 5,
     "retractionLongLength": 13,
     "retractionSpeed": 40,
-    "retractionZLift": 0,
+    "retractionZLift": 2,
     "retractionUndoExtraLength": 0,
     "retractionUndoExtraLongLength": 0,
     "retractionUndoSpeed": 20,
