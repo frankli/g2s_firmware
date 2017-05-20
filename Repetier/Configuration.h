@@ -86,7 +86,7 @@
 #define EXT0_X_OFFSET 0
 #define EXT0_Y_OFFSET -1040
 #define EXT0_Z_OFFSET 0
-#define EXT0_STEPS_PER_MM 93
+#define EXT0_STEPS_PER_MM 145
 #define EXT0_TEMPSENSOR_TYPE 1
 #define EXT0_TEMPSENSOR_PIN TEMP_0_PIN
 #define EXT0_HEATER_PIN HEATER_0_PIN
@@ -124,10 +124,10 @@
 #define EXT0_DECOUPLE_TEST_PERIOD 12000
 #define EXT0_JAM_PIN -1
 #define EXT0_JAM_PULLUP 0
-#define EXT1_X_OFFSET 0
-#define EXT1_Y_OFFSET 1080
+#define EXT1_X_OFFSET 30
+#define EXT1_Y_OFFSET 1048
 #define EXT1_Z_OFFSET 0
-#define EXT1_STEPS_PER_MM 93
+#define EXT1_STEPS_PER_MM 145
 #define EXT1_TEMPSENSOR_TYPE 1
 #define EXT1_TEMPSENSOR_PIN TEMP_2_PIN
 #define EXT1_HEATER_PIN HEATER_2_PIN
@@ -381,7 +381,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define EXACT_DELTA_MOVES 1
 
 // Delta settings
-#define DELTA_DIAGONAL_ROD 196 // mm
+#define DELTA_DIAGONAL_ROD 198 // mm
 #define DELTA_ALPHA_A 210
 #define DELTA_ALPHA_B 330
 #define DELTA_ALPHA_C 90
@@ -394,8 +394,8 @@ It also can add a delay to wait for spindle to run on full speed.
 #define END_EFFECTOR_HORIZONTAL_OFFSET 0
 #define CARRIAGE_HORIZONTAL_OFFSET 0
 #define DELTA_MAX_RADIUS 110
-#define ROD_RADIUS 92
-#define PRINTER_RADIUS 92
+#define ROD_RADIUS 92.2
+#define PRINTER_RADIUS 92.2
 #define DELTA_HOME_ON_POWER 0
 #define STEP_COUNTER
 #define DELTA_X_ENDSTOP_OFFSET_STEPS 0
@@ -670,7 +670,7 @@ Values must be in range 1..255
             "waitRetractTemp": 150,
             "waitRetractUnits": 0,
             "waitRetract": 0,
-            "stepsPerMM": 93,
+            "stepsPerMM": 145,
             "coolerPin": -1,
             "coolerSpeed": 255,
             "selectCommands": "",
@@ -724,16 +724,16 @@ Values must be in range 1..255
             "waitRetractTemp": 150,
             "waitRetractUnits": 0,
             "waitRetract": 0,
-            "stepsPerMM": 93,
+            "stepsPerMM": 145,
             "coolerPin": -1,
             "coolerSpeed": 255,
             "selectCommands": "",
             "deselectCommands": "",
-            "xOffset": 0,
-            "yOffset": 13.5,
+            "xOffset": 0.375,
+            "yOffset": 13.1,
             "zOffset": 0,
-            "xOffsetSteps": 0,
-            "yOffsetSteps": 1080,
+            "xOffsetSteps": 30,
+            "yOffsetSteps": 1048,
             "zOffsetSteps": 0,
             "stepper": {
                 "name": "Extruder 1",
@@ -821,8 +821,8 @@ Values must be in range 1..255
     "zEndstopBack": 0,
     "deltaSegmentsPerSecondPrint": 180,
     "deltaSegmentsPerSecondTravel": 70,
-    "deltaDiagonalRod": 196,
-    "deltaHorizontalRadius": 92,
+    "deltaDiagonalRod": 198,
+    "deltaHorizontalRadius": 92.2,
     "deltaAlphaA": 210,
     "deltaAlphaB": 330,
     "deltaAlphaC": 90,
