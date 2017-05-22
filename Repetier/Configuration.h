@@ -350,7 +350,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z_HOME_DIR 1
 #define X_MAX_LENGTH 200
 #define Y_MAX_LENGTH 200
-#define Z_MAX_LENGTH 203.7
+#define Z_MAX_LENGTH 202.3
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
@@ -394,8 +394,8 @@ It also can add a delay to wait for spindle to run on full speed.
 #define END_EFFECTOR_HORIZONTAL_OFFSET 0
 #define CARRIAGE_HORIZONTAL_OFFSET 0
 #define DELTA_MAX_RADIUS 110
-#define ROD_RADIUS 92.2
-#define PRINTER_RADIUS 92.2
+#define ROD_RADIUS 92.75
+#define PRINTER_RADIUS 92.75
 #define DELTA_HOME_ON_POWER 0
 #define STEP_COUNTER
 #define DELTA_X_ENDSTOP_OFFSET_STEPS 0
@@ -527,7 +527,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_XY_SPEED 150
 #define Z_PROBE_SWITCHING_DISTANCE 10
 #define Z_PROBE_REPETITIONS 1
-#define Z_PROBE_HEIGHT 4.9
+#define Z_PROBE_HEIGHT 4.55
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
 #define Z_PROBE_RUN_AFTER_EVERY_PROBE ""
@@ -807,7 +807,7 @@ Values must be in range 1..255
     "zMinPos": 0,
     "xLength": 200,
     "yLength": 200,
-    "zLength": 203.7,
+    "zLength": 202.3,
     "alwaysCheckEndstops": "0",
     "disableX": "0",
     "disableY": "0",
@@ -822,7 +822,7 @@ Values must be in range 1..255
     "deltaSegmentsPerSecondPrint": 180,
     "deltaSegmentsPerSecondTravel": 70,
     "deltaDiagonalRod": 198,
-    "deltaHorizontalRadius": 92.2,
+    "deltaHorizontalRadius": 92.75,
     "deltaAlphaA": 210,
     "deltaAlphaB": 330,
     "deltaAlphaC": 90,
@@ -1013,7 +1013,7 @@ Values must be in range 1..255
     "zProbeWaitBeforeTest": "0",
     "zProbeSpeed": 2,
     "zProbeXYSpeed": 150,
-    "zProbeHeight": 4.9,
+    "zProbeHeight": 4.55,
     "zProbeStartScript": "",
     "zProbeFinishedScript": "",
     "featureAutolevel": "1",
