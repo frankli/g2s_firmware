@@ -786,6 +786,7 @@ void Stepper::isr() {
     NOLESS(OCR1A, TCNT1 + 16);
   #endif
 
+  OCR1A = (OCR1A < (TCNT1 +16)) ? (TCNT1 + 16) : OCR1A;
   // If current block is finished, reset pointer
   if (all_steps_done) {
     current_block = NULL;

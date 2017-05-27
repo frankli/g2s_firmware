@@ -382,8 +382,8 @@ It also can add a delay to wait for spindle to run on full speed.
 
 // Delta settings
 #define DELTA_DIAGONAL_ROD 198 // mm
-#define DELTA_ALPHA_A 210
-#define DELTA_ALPHA_B 330
+#define DELTA_ALPHA_A 210.14
+#define DELTA_ALPHA_B 329.9
 #define DELTA_ALPHA_C 90
 #define DELTA_RADIUS_CORRECTION_A 0
 #define DELTA_RADIUS_CORRECTION_B 0
@@ -394,8 +394,8 @@ It also can add a delay to wait for spindle to run on full speed.
 #define END_EFFECTOR_HORIZONTAL_OFFSET 0
 #define CARRIAGE_HORIZONTAL_OFFSET 0
 #define DELTA_MAX_RADIUS 110
-#define ROD_RADIUS 92.75
-#define PRINTER_RADIUS 92.75
+#define ROD_RADIUS 92.47
+#define PRINTER_RADIUS 92.47
 #define DELTA_HOME_ON_POWER 0
 #define STEP_COUNTER
 #define DELTA_X_ENDSTOP_OFFSET_STEPS 0
@@ -410,9 +410,9 @@ It also can add a delay to wait for spindle to run on full speed.
 #define MAX_FEEDRATE_X 200
 #define MAX_FEEDRATE_Y 200
 #define MAX_FEEDRATE_Z 200
-#define HOMING_FEEDRATE_X 40
-#define HOMING_FEEDRATE_Y 40
-#define HOMING_FEEDRATE_Z 40
+#define HOMING_FEEDRATE_X 100
+#define HOMING_FEEDRATE_Y 100
+#define HOMING_FEEDRATE_Z 100
 #define HOMING_ORDER HOME_ORDER_ZXY
 #define ZHOME_PRE_RAISE 0
 #define ZHOME_PRE_RAISE_DISTANCE 10
@@ -432,12 +432,12 @@ It also can add a delay to wait for spindle to run on full speed.
 #define STEP_DOUBLER_FREQUENCY 12000
 #define ALLOW_QUADSTEPPING 1
 #define DOUBLE_STEP_DELAY 0 // time in microseconds
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 1000
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1000
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 1000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 2000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 2000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 2000
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 3000
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 3000
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 3000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 3000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 3000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 3000
 #define INTERPOLATE_ACCELERATION_WITH_Z 0
 #define ACCELERATION_FACTOR_TOP 100
 #define MAX_JERK 20
@@ -520,14 +520,14 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_PIN ORIG_Z_MIN_PIN
 #define Z_PROBE_PULLUP 1
 #define Z_PROBE_ON_HIGH 0
-#define Z_PROBE_X_OFFSET -19
-#define Z_PROBE_Y_OFFSET -11
+#define Z_PROBE_X_OFFSET 0
+#define Z_PROBE_Y_OFFSET 0
 #define Z_PROBE_WAIT_BEFORE_TEST 0
 #define Z_PROBE_SPEED 2
 #define Z_PROBE_XY_SPEED 150
 #define Z_PROBE_SWITCHING_DISTANCE 10
 #define Z_PROBE_REPETITIONS 3
-#define Z_PROBE_HEIGHT 4.55
+#define Z_PROBE_HEIGHT 4.75
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
 #define Z_PROBE_RUN_AFTER_EVERY_PROBE ""
@@ -767,17 +767,17 @@ Values must be in range 1..255
     "motherboard": 37,
     "driveSystem": 3,
     "xMaxSpeed": 200,
-    "xHomingSpeed": 40,
-    "xTravelAcceleration": 2000,
-    "xPrintAcceleration": 1000,
+    "xHomingSpeed": 100,
+    "xTravelAcceleration": 3000,
+    "xPrintAcceleration": 3000,
     "yMaxSpeed": 200,
-    "yHomingSpeed": 40,
-    "yTravelAcceleration": 2000,
-    "yPrintAcceleration": 1000,
+    "yHomingSpeed": 100,
+    "yTravelAcceleration": 3000,
+    "yPrintAcceleration": 3000,
     "zMaxSpeed": 200,
-    "zHomingSpeed": 40,
-    "zTravelAcceleration": 2000,
-    "zPrintAcceleration": 1000,
+    "zHomingSpeed": 100,
+    "zTravelAcceleration": 3000,
+    "zPrintAcceleration": 3000,
     "xMotor": {
         "name": "X motor",
         "step": "ORIG_X_STEP_PIN",
@@ -822,9 +822,9 @@ Values must be in range 1..255
     "deltaSegmentsPerSecondPrint": 180,
     "deltaSegmentsPerSecondTravel": 70,
     "deltaDiagonalRod": 198,
-    "deltaHorizontalRadius": 92.75,
-    "deltaAlphaA": 210,
-    "deltaAlphaB": 330,
+    "deltaHorizontalRadius": 92.47,
+    "deltaAlphaA": 210.14,
+    "deltaAlphaB": 329.9,
     "deltaAlphaC": 90,
     "deltaDiagonalCorrA": 0,
     "deltaDiagonalCorrB": 0,
@@ -1008,12 +1008,12 @@ Values must be in range 1..255
     "zProbeBedDistance": 20,
     "zProbePullup": "1",
     "zProbeOnHigh": "0",
-    "zProbeXOffset": -19,
-    "zProbeYOffset": -11,
+    "zProbeXOffset": 0,
+    "zProbeYOffset": 0,
     "zProbeWaitBeforeTest": "0",
     "zProbeSpeed": 2,
     "zProbeXYSpeed": 150,
-    "zProbeHeight": 4.55,
+    "zProbeHeight": 4.75,
     "zProbeStartScript": "",
     "zProbeFinishedScript": "",
     "featureAutolevel": "1",
