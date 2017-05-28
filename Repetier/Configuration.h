@@ -86,7 +86,7 @@
 #define EXT0_X_OFFSET 0
 #define EXT0_Y_OFFSET -1040
 #define EXT0_Z_OFFSET 0
-#define EXT0_STEPS_PER_MM 145
+#define EXT0_STEPS_PER_MM 101
 #define EXT0_TEMPSENSOR_TYPE 1
 #define EXT0_TEMPSENSOR_PIN TEMP_0_PIN
 #define EXT0_HEATER_PIN HEATER_0_PIN
@@ -127,7 +127,7 @@
 #define EXT1_X_OFFSET 30
 #define EXT1_Y_OFFSET 1048
 #define EXT1_Z_OFFSET 0
-#define EXT1_STEPS_PER_MM 145
+#define EXT1_STEPS_PER_MM 101
 #define EXT1_TEMPSENSOR_TYPE 1
 #define EXT1_TEMPSENSOR_PIN TEMP_2_PIN
 #define EXT1_HEATER_PIN HEATER_2_PIN
@@ -357,7 +357,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z2_MINMAX_PIN -1
 
 #define DISTORTION_CORRECTION 1
-#define DISTORTION_CORRECTION_POINTS 5
+#define DISTORTION_CORRECTION_POINTS 8
 #define DISTORTION_CORRECTION_R 60
 #define DISTORTION_PERMANENT 1
 #define DISTORTION_UPDATE_FREQUENCY 15
@@ -670,7 +670,7 @@ Values must be in range 1..255
             "waitRetractTemp": 150,
             "waitRetractUnits": 0,
             "waitRetract": 0,
-            "stepsPerMM": 145,
+            "stepsPerMM": 101,
             "coolerPin": -1,
             "coolerSpeed": 255,
             "selectCommands": "",
@@ -724,7 +724,7 @@ Values must be in range 1..255
             "waitRetractTemp": 150,
             "waitRetractUnits": 0,
             "waitRetract": 0,
-            "stepsPerMM": 145,
+            "stepsPerMM": 101,
             "coolerPin": -1,
             "coolerSpeed": 255,
             "selectCommands": "",
@@ -1061,7 +1061,7 @@ Values must be in range 1..255
     "pauseStartCommands": "",
     "pauseEndCommands": "",
     "distortionCorrection": "1",
-    "distortionCorrectionPoints": 5,
+    "distortionCorrectionPoints": 8,
     "distortionCorrectionR": 60,
     "distortionPermanent": "1",
     "distortionUpdateFrequency": 15,
