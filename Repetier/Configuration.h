@@ -280,7 +280,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define CNC_DIRECTION_CW 1
 #define CNC_PWM_MAX 255
 #define CNC_RPM_MAX 8000
-
+#define CNC_SAFE_Z 150
 
 #define DEFAULT_PRINTER_MODE 0
 
@@ -513,7 +513,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 
 #define Z_PROBE_Z_OFFSET 0
 #define Z_PROBE_Z_OFFSET_MODE 0
-#define UI_BED_COATING 0
+#define UI_BED_COATING 1
 #define FEATURE_Z_PROBE 1
 #define EXTRUDER_IS_Z_PROBE 0
 #define Z_PROBE_BED_DISTANCE 20
@@ -573,7 +573,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define FEATURE_CHECKSUM_FORCED 0
 #define FEATURE_FAN_CONTROL 1
 #define FEATURE_FAN2_CONTROL 0
-#define FEATURE_CONTROLLER 2
+#define FEATURE_CONTROLLER 11
 #define ADC_KEYPAD_PIN -1
 #define LANGUAGE_EN_ACTIVE 1
 #define LANGUAGE_DE_ACTIVE 0
@@ -595,7 +595,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define UI_AUTORETURN_TO_MENU_AFTER 30000
 #define FEATURE_UI_KEYS 0
 #define UI_ENCODER_SPEED 1
-#define UI_REVERSE_ENCODER 1
+#define UI_REVERSE_ENCODER 0
 #define UI_KEY_BOUNCETIME 10
 #define UI_KEY_FIRST_REPEAT 500
 #define UI_KEY_REDUCE_REPEAT 50
@@ -902,7 +902,7 @@ Values must be in range 1..255
     "enableZProbing": "1",
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_ZXY",
-    "featureController": 2,
+    "featureController": 11,
     "uiPrinterName": "G2S",
     "uiPrinterCompany": "",
     "uiPagesDuration": 4000,
@@ -911,7 +911,7 @@ Values must be in range 1..255
     "uiAutoReturnAfter": 30000,
     "featureKeys": "0",
     "uiEncoderSpeed": 1,
-    "uiReverseEncoder": "1",
+    "uiReverseEncoder": "0",
     "uiKeyBouncetime": 10,
     "uiKeyFirstRepeat": 500,
     "uiKeyReduceRepeat": 50,
@@ -1212,7 +1212,7 @@ Values must be in range 1..255
     "zHomeHeatAll": "1",
     "zProbeZOffsetMode": 0,
     "zProbeZOffset": 0,
-    "uiBedCoating": "0",
+    "uiBedCoating": "1",
     "langEN": "1",
     "langDE": "0",
     "langNL": "0",
@@ -1247,6 +1247,7 @@ Values must be in range 1..255
     "cncDirectionCW": "1",
     "cncPwmMax": 255,
     "cncRpmMax": 8000,
+    "cncSafeZ": 150,
     "startupGCode": "",
     "jsonOutput": "0",
     "bedLevelingMethod": 0,
