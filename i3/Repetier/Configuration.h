@@ -295,9 +295,9 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DISABLE_Y 0
 #define DISABLE_Z 0
 #define DISABLE_E 0
-#define INVERT_X_DIR 0
+#define INVERT_X_DIR 1
 #define INVERT_Y_DIR 0
-#define INVERT_Z_DIR 0
+#define INVERT_Z_DIR 1
 #define X_HOME_DIR -1
 #define Y_HOME_DIR -1
 #define Z_HOME_DIR -1
@@ -309,7 +309,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z_MIN_POS 0
 #define Z2_MINMAX_PIN -1
 
-#define DISTORTION_CORRECTION 1
+#define DISTORTION_CORRECTION 0
 #define DISTORTION_CORRECTION_POINTS 8
 #define DISTORTION_CORRECTION_R 100
 #define DISTORTION_PERMANENT 1
@@ -571,12 +571,12 @@ Values must be in range 1..255
     "xStepsPerMM": 100,
     "yStepsPerMM": 0,
     "zStepsPerMM": 405.4591,
-    "xInvert": 0,
+    "xInvert": "1",
     "xInvertEnable": 0,
     "eepromMode": 1,
     "yInvert": 0,
     "yInvertEnable": 0,
-    "zInvert": 0,
+    "zInvert": "1",
     "zInvertEnable": 0,
     "extruder": [
         {
@@ -938,7 +938,7 @@ Values must be in range 1..255
     "retractOnPause": 2,
     "pauseStartCommands": "",
     "pauseEndCommands": "",
-    "distortionCorrection": "1",
+    "distortionCorrection": "0",
     "distortionCorrectionPoints": 8,
     "distortionCorrectionR": 100,
     "distortionPermanent": "1",
