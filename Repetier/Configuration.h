@@ -121,7 +121,7 @@
 #define EXT0_DESELECT_COMMANDS ""
 #define EXT0_EXTRUDER_COOLER_PIN -1
 #define EXT0_EXTRUDER_COOLER_SPEED 255
-#define EXT0_DECOUPLE_TEST_PERIOD 12000
+#define EXT0_DECOUPLE_TEST_PERIOD 30000
 #define EXT0_JAM_PIN -1
 #define EXT0_JAM_PULLUP 0
 #define EXT1_X_OFFSET 30
@@ -162,7 +162,7 @@
 #define EXT1_DESELECT_COMMANDS ""
 #define EXT1_EXTRUDER_COOLER_PIN -1
 #define EXT1_EXTRUDER_COOLER_SPEED 255
-#define EXT1_DECOUPLE_TEST_PERIOD 12000
+#define EXT1_DECOUPLE_TEST_PERIOD 30000
 #define EXT1_JAM_PIN -1
 #define EXT1_JAM_PULLUP 0
 
@@ -573,7 +573,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define FEATURE_CHECKSUM_FORCED 0
 #define FEATURE_FAN_CONTROL 1
 #define FEATURE_FAN2_CONTROL 0
-#define FEATURE_CONTROLLER 11
+#define FEATURE_CONTROLLER 0
 #define ADC_KEYPAD_PIN -1
 #define LANGUAGE_EN_ACTIVE 1
 #define LANGUAGE_DE_ACTIVE 0
@@ -688,7 +688,7 @@ Values must be in range 1..255
                 "enable": "ORIG_E0_ENABLE_PIN"
             },
             "advanceBacklashSteps": 0,
-            "decoupleTestPeriod": 12,
+            "decoupleTestPeriod": 30,
             "jamPin": -1,
             "jamPullup": "0",
             "mirror": "0",
@@ -742,7 +742,7 @@ Values must be in range 1..255
                 "enable": "ORIG_E1_ENABLE_PIN"
             },
             "advanceBacklashSteps": 0,
-            "decoupleTestPeriod": 12,
+            "decoupleTestPeriod": 30,
             "jamPin": -1,
             "jamPullup": "0",
             "mirror": "0",
@@ -902,7 +902,7 @@ Values must be in range 1..255
     "enableZProbing": "1",
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_ZXY",
-    "featureController": 11,
+    "featureController": 0,
     "uiPrinterName": "G2S",
     "uiPrinterCompany": "",
     "uiPagesDuration": 4000,
