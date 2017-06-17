@@ -44,7 +44,7 @@
 // ################ END MANUAL SETTINGS ##########################
 
 #undef FAN_BOARD_PIN
-#define FAN_BOARD_PIN -1
+#define FAN_BOARD_PIN ORIG_FAN_PIN
 #define BOARD_FAN_SPEED 255
 #define BOARD_FAN_MIN_SPEED 0
 #define FAN_THERMO_PIN -1
@@ -161,7 +161,7 @@
 
 // ############# Heated bed configuration ########################
 
-#define HAVE_HEATED_BED 0
+#define HAVE_HEATED_BED 1
 #define HEATED_BED_PREHEAT_TEMP 55
 #define HEATED_BED_MAX_TEMP 120
 #define SKIP_M190_IF_WITHIN 3
@@ -527,7 +527,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define UI_AUTORETURN_TO_MENU_AFTER 30000
 #define FEATURE_UI_KEYS 0
 #define UI_ENCODER_SPEED 1
-#define UI_REVERSE_ENCODER 0
+#define UI_REVERSE_ENCODER 1
 #define UI_KEY_BOUNCETIME 10
 #define UI_KEY_FIRST_REPEAT 500
 #define UI_KEY_REDUCE_REPEAT 50
@@ -776,7 +776,7 @@ Values must be in range 1..255
     "servo2Pin": -1,
     "servo3Pin": -1,
     "featureWatchdog": "0",
-    "hasHeatedBed": "0",
+    "hasHeatedBed": "1",
     "enableZProbing": "0",
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_XYZ",
@@ -789,7 +789,7 @@ Values must be in range 1..255
     "uiAutoReturnAfter": 30000,
     "featureKeys": "0",
     "uiEncoderSpeed": 1,
-    "uiReverseEncoder": "0",
+    "uiReverseEncoder": "1",
     "uiKeyBouncetime": 10,
     "uiKeyFirstRepeat": 500,
     "uiKeyReduceRepeat": 50,
@@ -921,7 +921,7 @@ Values must be in range 1..255
     "yMaxPin": "ORIG_Y_MAX_PIN",
     "zMaxPin": "ORIG_Z_MAX_PIN",
     "deltaHomeOnPower": "0",
-    "fanBoardPin": -1,
+    "fanBoardPin": "ORIG_FAN_PIN",
     "heaterPWMSpeed": 0,
     "featureBabystepping": "1",
     "babystepMultiplicator": 1,
