@@ -65,7 +65,7 @@
 
 #define DRIVE_SYSTEM 0
 #define XAXIS_STEPS_PER_MM 100
-#define YAXIS_STEPS_PER_MM 0
+#define YAXIS_STEPS_PER_MM 100
 #define ZAXIS_STEPS_PER_MM 405.4591
 #define EXTRUDER_FAN_COOL_TEMP 50
 #define PDM_FOR_EXTRUDER 0
@@ -115,7 +115,7 @@
 #define EXT0_DESELECT_COMMANDS ""
 #define EXT0_EXTRUDER_COOLER_PIN -1
 #define EXT0_EXTRUDER_COOLER_SPEED 255
-#define EXT0_DECOUPLE_TEST_PERIOD 12000
+#define EXT0_DECOUPLE_TEST_PERIOD 30000
 #define EXT0_JAM_PIN -1
 #define EXT0_JAM_PULLUP 0
 
@@ -345,7 +345,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define HOMING_FEEDRATE_X 40
 #define HOMING_FEEDRATE_Y 40
 #define HOMING_FEEDRATE_Z 2
-#define HOMING_ORDER HOME_ORDER_ZXY
+#define HOMING_ORDER HOME_ORDER_XYZ
 #define ZHOME_PRE_RAISE 0
 #define ZHOME_PRE_RAISE_DISTANCE 10
 #define RAISE_Z_ON_TOOLCHANGE 0
@@ -364,11 +364,11 @@ It also can add a delay to wait for spindle to run on full speed.
 #define STEP_DOUBLER_FREQUENCY 12000
 #define ALLOW_QUADSTEPPING 1
 #define DOUBLE_STEP_DELAY 0 // time in microseconds
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 1000
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1000
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 500
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 500
 #define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 100
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 1000
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 1000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 500
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 500
 #define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 100
 #define INTERPOLATE_ACCELERATION_WITH_Z 0
 #define ACCELERATION_FACTOR_TOP 100
@@ -569,7 +569,7 @@ Values must be in range 1..255
     "bluetoothSerial": -1,
     "bluetoothBaudrate": 115200,
     "xStepsPerMM": 100,
-    "yStepsPerMM": 0,
+    "yStepsPerMM": 100,
     "zStepsPerMM": 405.4591,
     "xInvert": "1",
     "xInvertEnable": 0,
@@ -620,7 +620,7 @@ Values must be in range 1..255
                 "enable": "ORIG_E0_ENABLE_PIN"
             },
             "advanceBacklashSteps": 0,
-            "decoupleTestPeriod": 12,
+            "decoupleTestPeriod": 30,
             "jamPin": -1,
             "jamPullup": "0",
             "mirror": "0",
@@ -646,12 +646,12 @@ Values must be in range 1..255
     "driveSystem": 0,
     "xMaxSpeed": 200,
     "xHomingSpeed": 40,
-    "xTravelAcceleration": 1000,
-    "xPrintAcceleration": 1000,
+    "xTravelAcceleration": 500,
+    "xPrintAcceleration": 500,
     "yMaxSpeed": 200,
     "yHomingSpeed": 40,
-    "yTravelAcceleration": 1000,
-    "yPrintAcceleration": 1000,
+    "yTravelAcceleration": 500,
+    "yPrintAcceleration": 500,
     "zMaxSpeed": 2,
     "zHomingSpeed": 2,
     "zTravelAcceleration": 100,
@@ -779,7 +779,7 @@ Values must be in range 1..255
     "hasHeatedBed": "0",
     "enableZProbing": "0",
     "extrudeMaxLength": 160,
-    "homeOrder": "HOME_ORDER_ZXY",
+    "homeOrder": "HOME_ORDER_XYZ",
     "featureController": 11,
     "uiPrinterName": "i3",
     "uiPrinterCompany": "Home made",
