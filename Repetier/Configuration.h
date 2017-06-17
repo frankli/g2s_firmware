@@ -573,7 +573,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define FEATURE_CHECKSUM_FORCED 0
 #define FEATURE_FAN_CONTROL 1
 #define FEATURE_FAN2_CONTROL 0
-#define FEATURE_CONTROLLER 0
+#define FEATURE_CONTROLLER 2
 #define ADC_KEYPAD_PIN -1
 #define LANGUAGE_EN_ACTIVE 1
 #define LANGUAGE_DE_ACTIVE 0
@@ -594,7 +594,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define UI_DISABLE_AUTO_PAGESWITCH 1
 #define UI_AUTORETURN_TO_MENU_AFTER 30000
 #define FEATURE_UI_KEYS 0
-#define UI_ENCODER_SPEED 1
+#define UI_ENCODER_SPEED 2
 #define UI_REVERSE_ENCODER 0
 #define UI_KEY_BOUNCETIME 10
 #define UI_KEY_FIRST_REPEAT 500
@@ -902,7 +902,7 @@ Values must be in range 1..255
     "enableZProbing": "1",
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_ZXY",
-    "featureController": 0,
+    "featureController": 2,
     "uiPrinterName": "G2S",
     "uiPrinterCompany": "",
     "uiPagesDuration": 4000,
@@ -910,7 +910,7 @@ Values must be in range 1..255
     "uiDisablePageswitch": "1",
     "uiAutoReturnAfter": 30000,
     "featureKeys": "0",
-    "uiEncoderSpeed": 1,
+    "uiEncoderSpeed": 2,
     "uiReverseEncoder": "0",
     "uiKeyBouncetime": 10,
     "uiKeyFirstRepeat": 500,
