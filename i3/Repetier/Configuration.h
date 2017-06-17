@@ -309,7 +309,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z_MIN_POS 0
 #define Z2_MINMAX_PIN -1
 
-#define DISTORTION_CORRECTION 0
+#define DISTORTION_CORRECTION 1
 #define DISTORTION_CORRECTION_POINTS 8
 #define DISTORTION_CORRECTION_R 100
 #define DISTORTION_PERMANENT 1
@@ -318,7 +318,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DISTORTION_END_HEIGHT 1
 #define DISTORTION_EXTRAPOLATE_CORNERS 0
 #define DISTORTION_XMIN 10
-#define DISTORTION_YMIN 10
+#define DISTORTION_YMIN 50
 #define DISTORTION_XMAX 190
 #define DISTORTION_YMAX 190
 
@@ -446,34 +446,34 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_Z_OFFSET 0
 #define Z_PROBE_Z_OFFSET_MODE 0
 #define UI_BED_COATING 1
-#define FEATURE_Z_PROBE 0
+#define FEATURE_Z_PROBE 1
 #define EXTRUDER_IS_Z_PROBE 0
 #define Z_PROBE_BED_DISTANCE 10
-#define Z_PROBE_PIN -1
-#define Z_PROBE_PULLUP 0
+#define Z_PROBE_PIN 69
+#define Z_PROBE_PULLUP 1
 #define Z_PROBE_ON_HIGH 0
-#define Z_PROBE_X_OFFSET 0
-#define Z_PROBE_Y_OFFSET 0
+#define Z_PROBE_X_OFFSET -10
+#define Z_PROBE_Y_OFFSET 40
 #define Z_PROBE_WAIT_BEFORE_TEST 0
 #define Z_PROBE_SPEED 2
-#define Z_PROBE_XY_SPEED 150
-#define Z_PROBE_SWITCHING_DISTANCE 1
+#define Z_PROBE_XY_SPEED 80
+#define Z_PROBE_SWITCHING_DISTANCE 5
 #define Z_PROBE_REPETITIONS 1
-#define Z_PROBE_HEIGHT 40
+#define Z_PROBE_HEIGHT 5
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
 #define Z_PROBE_RUN_AFTER_EVERY_PROBE ""
 #define Z_PROBE_REQUIRES_HEATING 0
 #define Z_PROBE_MIN_TEMPERATURE 150
-#define FEATURE_AUTOLEVEL 0
+#define FEATURE_AUTOLEVEL 1
 #define FEATURE_SOFTWARE_LEVELING 0
-#define Z_PROBE_X1 20
-#define Z_PROBE_Y1 20
-#define Z_PROBE_X2 160
-#define Z_PROBE_Y2 20
-#define Z_PROBE_X3 20
-#define Z_PROBE_Y3 160
-#define BED_LEVELING_METHOD 0
+#define Z_PROBE_X1 5
+#define Z_PROBE_Y1 45
+#define Z_PROBE_X2 180
+#define Z_PROBE_Y2 45
+#define Z_PROBE_X3 5
+#define Z_PROBE_Y3 180
+#define BED_LEVELING_METHOD 1
 #define BED_CORRECTION_METHOD 0
 #define BED_LEVELING_GRID_SIZE 5
 #define BED_LEVELING_REPETITIONS 5
@@ -777,7 +777,7 @@ Values must be in range 1..255
     "servo3Pin": -1,
     "featureWatchdog": "0",
     "hasHeatedBed": "1",
-    "enableZProbing": "0",
+    "enableZProbing": "1",
     "extrudeMaxLength": 160,
     "homeOrder": "HOME_ORDER_XYZ",
     "featureController": 11,
@@ -882,26 +882,26 @@ Values must be in range 1..255
     "fanThermoThermistorPin": -1,
     "fanThermoThermistorType": 1,
     "scalePidToMax": 0,
-    "zProbePin": -1,
+    "zProbePin": 69,
     "zProbeBedDistance": 10,
-    "zProbePullup": "0",
+    "zProbePullup": "1",
     "zProbeOnHigh": "0",
-    "zProbeXOffset": 0,
-    "zProbeYOffset": 0,
+    "zProbeXOffset": -10,
+    "zProbeYOffset": 40,
     "zProbeWaitBeforeTest": "0",
     "zProbeSpeed": 2,
-    "zProbeXYSpeed": 150,
-    "zProbeHeight": 40,
+    "zProbeXYSpeed": 80,
+    "zProbeHeight": 5,
     "zProbeStartScript": "",
     "zProbeFinishedScript": "",
-    "featureAutolevel": "0",
-    "zProbeX1": 20,
-    "zProbeY1": 20,
-    "zProbeX2": 160,
-    "zProbeY2": 20,
-    "zProbeX3": 20,
-    "zProbeY3": 160,
-    "zProbeSwitchingDistance": 1,
+    "featureAutolevel": "1",
+    "zProbeX1": 5,
+    "zProbeY1": 45,
+    "zProbeX2": 180,
+    "zProbeY2": 45,
+    "zProbeX3": 5,
+    "zProbeY3": 180,
+    "zProbeSwitchingDistance": 5,
     "zProbeRepetitions": 1,
     "zProbeEveryPoint": "",
     "sdSupport": "0",
@@ -938,7 +938,7 @@ Values must be in range 1..255
     "retractOnPause": 2,
     "pauseStartCommands": "",
     "pauseEndCommands": "",
-    "distortionCorrection": "0",
+    "distortionCorrection": "1",
     "distortionCorrectionPoints": 8,
     "distortionCorrectionR": 100,
     "distortionPermanent": "1",
@@ -948,7 +948,7 @@ Values must be in range 1..255
     "distortionExtrapolateCorners": "0",
     "distortionXMin": 10,
     "distortionXMax": 190,
-    "distortionYMin": 10,
+    "distortionYMin": 50,
     "distortionYMax": 190,
     "sdRunOnStop": "",
     "sdStopHeaterMotorsOnStop": "1",
@@ -1128,7 +1128,7 @@ Values must be in range 1..255
     "cncSafeZ": 150,
     "startupGCode": "",
     "jsonOutput": "0",
-    "bedLevelingMethod": 0,
+    "bedLevelingMethod": 1,
     "bedCorrectionMethod": 0,
     "bedLevelingGridSize": 5,
     "bedLevelingRepetitions": 5,
